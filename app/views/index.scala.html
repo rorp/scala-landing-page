@@ -1,0 +1,13 @@
+@(subscribeForm: Form[String])
+
+@main {
+    <form class="form-inline" id="subscribeForm">
+        <input id="email" name="email" class="input-xlarge" type="text" placeholder="Type your email...">
+        <button id="subscribe" type="submit" class="btn btn-primary">Sign up</button>
+    </form>
+    <div id = "alert_placeholder"></div>
+
+    <script>
+        var subscribeUrl = "@routes.Application.subscribe";
+    </script>
+}
