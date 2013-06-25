@@ -38,7 +38,9 @@ Instructions: [http://kb.mailchimp.com/category/getting-started/]
 1. Once you have edited `conf/application.conf` and `app/views/main.scala.html`, run the following commands from your project folder:
 
     `$ git init`
+
     `$ git add .`
+
     `$ git commit -m "setting up landing page"`
 
 1. Now create your Heroku app by running from your project folder:
