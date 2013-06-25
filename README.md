@@ -8,10 +8,10 @@ Scala Landing Page can be hosted on Heroku and integrated with MailChimp -- both
 # Instructions
 
 1. Setup an account on [Heroku](heroku.com) (you can use the free account)
-Instructions: [http://devcenter.heroku.com/articles/quickstart]()
+Instructions: [http://devcenter.heroku.com/articles/quickstart]().
 Make sure you have the pre-reqs: [http://devcenter.heroku.com/articles/quickstart#prerequisites]()
 
-1. Setup an account on [MailChimp](mailchimp.com)
+1. Setup an account on [MailChimp](mailchimp.com).
 Instructions: [http://kb.mailchimp.com/category/getting-started/]
 
 1. Extract **scala-landing-page** into a folder
@@ -29,7 +29,7 @@ Instructions: [http://kb.mailchimp.com/category/getting-started/]
 
 1. Modify `app/views/main.scala.html`, replacing sample content with your own. Make sure you have not removed @content tag.
 
-1. Test the landing page locally at (http://localhost:9000/).
+1. Test the landing page locally at [http://localhost:9000/](http://localhost:9000/).
 
     `$ play run`
 
