@@ -13,7 +13,7 @@ object MailChimp {
   val apiKey = configString("mailchimp.apikey")
   val listName = configString("mailchimp.listname")
 
-  val mailChimpClient = new MailChimpClient()
+  private lazy val mailChimpClient = new MailChimpClient()
 
   def subscribe(email: String): Either[String, String] = {
     try {

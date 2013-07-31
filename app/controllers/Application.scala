@@ -23,16 +23,15 @@ object Application extends Controller {
     def errorsAsJson(errors: JsValue) = Json.obj("errors" -> errors)
     def escape(s: String) = HtmlFormat.escape(s).toString()
 
-    val result = subscribeForm.bindFromRequest.fold(
-      errors => errorsAsJson(errors.errorsAsJson),
+    subscribeForm.bindFromRequest.fold(
+      errors => BadRequest(errorsAsJson(errors.errorsAsJson)),
       email => {
         MailChimp.subscribe(email) match {
-          case Right(msg) => Json.obj("success" -> escape(msg))
-          case Left(msg) => errorsAsJson(Json.obj("email" -> Json.arr(escape(msg))))
+          case Right(msg) => Ok(Json.obj("success" -> escape(msg)))
+          case Left(msg) => InternalServerError(errorsAsJson(Json.obj("email" -> Json.arr(escape(msg)))))
         }
       }
     )
-    Ok(result)
   }
 
 }
